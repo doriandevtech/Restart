@@ -5,20 +5,28 @@
 //  Created by Dorian Emenir on 13/07/2024.
 //
 
+// MARK: - Imports
 import SwiftUI
 
+// MARK: - ContentView
 struct ContentView: View {
+    
+    // MARK: - Properties
+    @AppStorage("onboarding") var isOnboardingViewActive: Bool = true
+    
+    // MARK: - Body
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            if isOnboardingViewActive {
+                OnboardingView()
+            } else {
+                HomeView()
+            }
         }
-        .padding()
     }
 }
 
+// MARK: - Preview
 #Preview {
     ContentView()
 }
