@@ -18,17 +18,37 @@ struct OnboardingView: View {
     // MARK: - BODY
     
     var body: some View {
-        VStack(spacing: 20) {
-            Text("Onboarding")
-                .font(.largeTitle)
+        ZStack {
+            Color(.colorBlue)
+                .ignoresSafeArea(.all, edges: .all)
             
-            Button(action: {
-                isOnboardingViewActive = false
-            }, label: {
-                Text("Start")
-            })
-            
-        } //: VSTACK
+            VStack(spacing: 20) {
+                // MARK: - HEADER
+                
+                Spacer()
+                
+                VStack(spacing: 0) {
+                    Text("Share.")
+                        .font(.system(size: 60))
+                        .fontWeight(.heavy)
+                        .foregroundStyle(.white)
+                    
+                    Text("""
+                    It's not much we can give but
+                    how much love we put into giving.
+                    """)
+                    .font(.title3)
+                    .fontWeight(.light)
+                    .foregroundStyle(.white)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 10)
+                }
+                // MARK: - CONTENT
+                
+                // MARK: - FOOTER
+                
+            } //: VSTACK
+        } //: ZSTACK
     }
 }
 
