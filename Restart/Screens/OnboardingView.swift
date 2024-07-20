@@ -45,6 +45,16 @@ struct OnboardingView: View {
                 }
                 // MARK: - CONTENT
                 
+                ZStack {
+                    ZStack {
+                        Circle()
+                            .stroke(.white.opacity(0.2), lineWidth: 40)
+                            .frame(width: 260, height: 260, alignment: .center)
+                    } //: ZSTACK
+                } //: CENTER
+
+                Spacer()
+                
                 // MARK: - FOOTER
                 
             } //: VSTACK
