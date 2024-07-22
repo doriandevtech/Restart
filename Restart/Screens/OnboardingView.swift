@@ -64,6 +64,19 @@ struct OnboardingView: View {
                 
                 // MARK: - FOOTER
                 
+                ZStack {
+                    // PARTS OF THE CUSTOM BUTTON
+                    
+                    // 1. BACKGROUND (STATIC)
+                    
+                    Capsule()
+                        .fill(Color.white.opacity(0.2))
+                    
+                    // 2. CALL-TO-ACTION (STATIC)
+                    // 3. CAPSULE (DYNAMIC WIDTH)
+                    // 4. CIRCLE (DRAGGABLE)
+                } //: FOOTER
+                
             } //: VSTACK
         } //: ZSTACK
     }
