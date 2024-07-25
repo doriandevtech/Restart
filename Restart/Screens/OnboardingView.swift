@@ -72,6 +72,10 @@ struct OnboardingView: View {
                     Capsule()
                         .fill(Color.white.opacity(0.2))
                     
+                    Capsule()
+                        .fill(Color.white.opacity(0.2))
+                        .padding(8)
+                    
                     // 2. CALL-TO-ACTION (STATIC)
                     // 3. CAPSULE (DYNAMIC WIDTH)
                     // 4. CIRCLE (DRAGGABLE)
